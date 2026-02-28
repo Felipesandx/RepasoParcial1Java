@@ -3,8 +3,11 @@ package com.repaso;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 	}
+	public static void prueba () {
+		System.out.println("Hola mundo!");
+		}
 
 }
