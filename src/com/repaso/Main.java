@@ -17,13 +17,13 @@ public class Main {
 		final int DIVISOR = 4;
 		
 		System.out.println("Ingrese un número");
-		numero = sc.nextInt();
+		n = sc.nextInt();
 		
-		while (n >= numero ) {
-			if(numero % DIVISOR ==0) {
+		while (n >= numero) {
+			if(numero % DIVISOR == 0) {
 				suma = suma + numero;
 			}
-			numero++;
+			numero += 4;
 		}
 		System.out.println("Respuesta: " + suma);
 	}
