@@ -8,7 +8,8 @@ public class Main {
 		
 	//	sumatoriaNumeroDivisible ();
 	//	numeroFactorial();
-		leerCantidadNum();
+	//	leerCantidadNum();
+		promedioNumerosPares();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -60,7 +61,7 @@ public class Main {
 			return;
 		}
 		System.out.println("Ingresa " + cantidad + " números:");
-			for (int i = 1; i <= cantidad; i++) {
+			for (int i = 0; i < cantidad; i++) {
 				int n = sc.nextInt();
 				if (n > 0) {
 					positivos++;
@@ -74,5 +75,30 @@ public class Main {
 		System.out.println("Se registraron " + positivos + " positivos");
 		System.out.println("Se registraron " + ceros + " ceros");
 		System.out.println("Se registraron " + negativos + " negativos");
+	}
+	//problema 4
+	public static void promedioNumerosPares() {
+		System.out.println("Ingresa un número:");
+		
+		double numero = sc.nextInt();
+		double contador = 0;
+		double suma = 0;
+		final int DIVISOR = 2;
+		
+		if (numero < 0) {
+			System.out.println("Ingresa un número valido:");
+			return;
+		}else {
+			while (numero  < contador) {
+				for(int i = 0; i < numero; i++ ) {
+					if (numero % DIVISOR == 0) {
+						suma = suma + contador;
+					}
+					 contador++; 
+				}
+				System.out.println("Respuesta: " + suma/contador );
+			}
+		}
+		
 	}
 }
