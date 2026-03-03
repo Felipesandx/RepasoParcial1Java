@@ -6,10 +6,12 @@ public class Main {
 	static Scanner sc = new Scanner (System.in);
 	public static void main(String[] args) {
 		
-		SumatoriaNumeroDivisible ();
+	//	sumatoriaNumeroDivisible ();
+	//	numeroFactorial();
+		leerCantidadNum();
 	}
 	//problema 1
-	public static void SumatoriaNumeroDivisible () {
+	public static void sumatoriaNumeroDivisible () {
 	
 		int n = 0;
 		int numero = 0;
@@ -26,5 +28,51 @@ public class Main {
 			numero += 4;
 		}
 		System.out.println("Respuesta: " + suma);
+	}
+	//problema 2
+	public static void numeroFactorial() {
+		System.out.println("Calcular el factorial de un número");
+		System.out.println("Introduce un número:");
+		
+		int numero = sc.nextInt();
+		if (numero < 0) {
+			System.out.println("Número invalido");
+			return;
+			}
+			long factorial = 1;
+			for (int i = 1; i <= numero; i++) {
+				factorial *= i;
+			}
+			System.out.println("\nEl factorial de " + numero + " es " + factorial );
+		
+	}
+	//problema 3
+	public static void leerCantidadNum() {
+		System.out.println("Ingresa la cantidad de números deseados:");
+		int cantidad = sc.nextInt();
+		
+		int positivos = 0;
+		int negativos = 0; 
+		int ceros = 0;
+		
+		if (cantidad < 0) {
+			System.out.println("Cantidad de números invalida");
+			return;
+		}
+		System.out.println("Ingresa " + cantidad + " números:");
+			for (int i = 1; i <= cantidad; i++) {
+				int n = sc.nextInt();
+				if (n > 0) {
+					positivos++;
+					
+				}else if (n == 0) {
+					ceros++;
+				}else {
+					negativos++;
+				}
+			}
+		System.out.println("Se registraron " + positivos + " positivos");
+		System.out.println("Se registraron " + ceros + " ceros");
+		System.out.println("Se registraron " + negativos + " negativos");
 	}
 }
