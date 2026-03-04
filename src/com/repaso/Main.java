@@ -12,7 +12,8 @@ public class Main {
 	//	promedioNumerosPares();
 	//	sumaDigitos();
 	//	multiplosDeSieteOnce();
-		divisiblesEntreTresYNoDos();
+	//	divisiblesEntreTresYNoDos();
+		horaDelDia();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -137,6 +138,7 @@ public class Main {
 			System.out.println("El número no es multiplo de ningúno");
 		}
 	}
+	//problema 7
 	public static void divisiblesEntreTresYNoDos() {
 		System.out.println("Números divisibles entre 3 pero NO 2");
 		System.out.print("Ingresa el Número a evaluar: ");
@@ -147,6 +149,21 @@ public class Main {
 			if (i % 3 == 0 && i %2 != 0) {
 				System.out.println(i);
 			}
+		}
+	}
+	//problema 8
+	public static void horaDelDia() {
+		System.out.println("Ingrese la hora del día en formato 24h:");
+		int hora = sc.nextInt();
+		
+		if(hora < 0 || hora > 23 ){
+			System.out.println("Número Invalido");
+		}else if (hora >= 0 && hora < 12) {
+			System.out.println("Mañana");
+		}else if(hora >= 12 && hora < 18) {
+			System.out.println("Tarde");
+		}else if (hora >= 18 && hora <= 23) {
+			System.out.println("Noche");
 		}
 	}
 }
