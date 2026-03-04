@@ -10,7 +10,8 @@ public class Main {
 	//	numeroFactorial();
 	//	leerCantidadNum();
 	//	promedioNumerosPares();
-		sumaDigitos();
+	//	sumaDigitos();
+		multiplosDeSieteOnce();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -100,6 +101,7 @@ public class Main {
 			System.out.println("Respuesta: " + (double)suma/contador );
 			}
 		}
+	//problema 5
 	public static void sumaDigitos() {
 		System.out.println("Ingrese un número para conocer sus digitos sumados");
 		
@@ -107,14 +109,32 @@ public class Main {
 		int suma = 0;
 		int digito;
 		
-		numero = Math.abs(numero);
+		numero = Math.abs(numero);//valor absoluto
 		
 		while (numero != 0) {
-			digito = numero % 10;
+			digito = numero % 10; //tomar el ultimo digito
 			suma+= digito;
-			numero = numero / 10;
+			numero = numero / 10; //
 		}
 		System.out.println("La suma de los digitos es: " + suma);
 		}
+	//problema 6
+	public static void multiplosDeSieteOnce() {
+		System.out.println("Introduce un número para conocer si es multiplo de 7 u 11");
+		System.out.print("Número: ");
+		
+		int numero = sc.nextInt();
+		
+		if (numero % 7 == 0 && numero % 11 == 0) {
+			System.out.println("El número es multiplo de 7 y de 11");
+			return;
+		}else if (numero % 11 == 0) {
+			System.out.println("El número es multiplo de 11");
+		}else if(numero % 7 == 0) {
+			System.out.println("El número es multiplo de 7");
+		}else {
+			System.out.println("El número no es multiplo de ningúno");
+		}
+	}
 }
 	
