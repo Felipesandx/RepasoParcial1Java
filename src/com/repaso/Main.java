@@ -9,7 +9,8 @@ public class Main {
 	//	sumatoriaNumeroDivisible ();
 	//	numeroFactorial();
 	//	leerCantidadNum();
-		promedioNumerosPares();
+	//	promedioNumerosPares();
+		sumaDigitos();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -99,4 +100,21 @@ public class Main {
 			System.out.println("Respuesta: " + (double)suma/contador );
 			}
 		}
-	}
+	public static void sumaDigitos() {
+		System.out.println("Ingrese un número para conocer sus digitos sumados");
+		
+		int numero = sc.nextInt();
+		int suma = 0;
+		int digito;
+		
+		numero = Math.abs(numero);
+		
+		while (numero != 0) {
+			digito = numero % 10;
+			suma+= digito;
+			numero = numero / 10;
+		}
+		System.out.println("La suma de los digitos es: " + suma);
+		}
+}
+	
