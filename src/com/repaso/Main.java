@@ -80,25 +80,23 @@ public class Main {
 	public static void promedioNumerosPares() {
 		System.out.println("Ingresa un número:");
 		
-		double numero = sc.nextInt();
-		double contador = 0;
-		double suma = 0;
+		int numero = sc.nextInt();
+		int contador = 0;
+		int suma = 0;
 		final int DIVISOR = 2;
 		
 		if (numero < 0) {
 			System.out.println("Ingresa un número valido:");
 			return;
-		}else {
-			while (numero  < contador) {
-				for(int i = 0; i < numero; i++ ) {
-					if (numero % DIVISOR == 0) {
-						suma = suma + contador;
-					}
-					 contador++; 
+		}
+		for(int i = 1; i <= numero; i++ ) {
+			if (i % DIVISOR == 0) {
+				suma += i;
+				contador++; 
 				}
-				System.out.println("Respuesta: " + suma/contador );
+			}
+		if (contador > 0) {
+			System.out.println("Respuesta: " + (double)suma/contador );
 			}
 		}
-		
 	}
-}
