@@ -11,7 +11,8 @@ public class Main {
 	//	leerCantidadNum();
 	//	promedioNumerosPares();
 	//	sumaDigitos();
-		multiplosDeSieteOnce();
+	//	multiplosDeSieteOnce();
+		divisiblesEntreTresYNoDos();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -134,6 +135,18 @@ public class Main {
 			System.out.println("El número es multiplo de 7");
 		}else {
 			System.out.println("El número no es multiplo de ningúno");
+		}
+	}
+	public static void divisiblesEntreTresYNoDos() {
+		System.out.println("Números divisibles entre 3 pero NO 2");
+		System.out.print("Ingresa el Número a evaluar: ");
+		
+		int numero = sc.nextInt();
+		
+		for (int i = 1; i <= numero; i++) {
+			if (i % 3 == 0 && i %2 != 0) {
+				System.out.println(i);
+			}
 		}
 	}
 }
