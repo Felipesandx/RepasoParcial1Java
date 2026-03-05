@@ -18,7 +18,8 @@ public class Main {
 	//	sumaRestaMultiplicacion();
 	//	mayorMenor();
 	//	tablaDivison();
-		digitosPares ();
+	//	digitosPares ();
+		numeroTriangular();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -296,6 +297,28 @@ public class Main {
 			numero /= 10;
 		}
 		System.out.println("La cantidad de pares es: " + pares);
+	}
+	// problema 14
+	public static void numeroTriangular() {
+		System.out.println("Ingresa un número para conocer si es triangular");
+		int numero = sc.nextInt();
+		int suma = 0;
+		int k = 1; //contador
+		
+		if(numero <= 0) {
+			System.out.println("Número invalido");
+			return;
+		}
+		
+		while (suma < numero) {
+			suma += k;
+			k++;
+		}
+		if(suma == numero) {
+			System.out.println("El número es triangular");
+		}else {
+			System.out.println("El número NO es triangular");
+		}
 	}
 }
 	
