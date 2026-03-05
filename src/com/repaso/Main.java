@@ -14,7 +14,8 @@ public class Main {
 	//	multiplosDeSieteOnce();
 	//	divisiblesEntreTresYNoDos();
 	//	horaDelDia();
-		numerosRomanos();
+	//	numerosRomanos();
+		sumaRestaMultiplicacion();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -197,5 +198,44 @@ public class Main {
 		}
 		System.out.println("La conversion a Número Romano es: " + numeroRomano);
 	} 
+	//Problema 10
+	public static void sumaRestaMultiplicacion() {
+		
+		System.out.println("Bienvenido! Elige una opción (1-3)");
+		System.out.println("1.Sumar");
+		System.out.println("2.Restar");
+		System.out.println("3.Multiplicar");
+		int opcion = sc.nextInt();
+		if (opcion > 3 || opcion < 1) {
+			System.out.println("Opción invalida");
+			return;
+		}
+		
+		System.out.println("\nIngresa dos números.");
+		System.out.print("Primer Número: ");
+		double numero1 = sc.nextDouble();
+		System.out.print("Segúndo Número: ");
+		double numero2 = sc.nextDouble();
+		double resultado;
+		
+		switch (opcion) {
+		case 1: 
+			resultado = numero1+(numero2);
+			System.out.println("El resultado de: " + numero1 + " + " + numero2 +" es: " + resultado);
+			break;
+		case 2: 
+			resultado = numero1-numero2;
+			System.out.println("El resultado de: " + numero1 + " - " + numero2 + " es: " + resultado);
+			break;
+		case 3: 
+			resultado = numero1*(numero2);
+			System.out.println("El resultado de: " + numero1 + " * " + numero2 + " es: " + resultado);
+			break;
+			
+			default:
+			System.out.println("Número invalido");
+			return;
+		}
+	}
 }
 	
