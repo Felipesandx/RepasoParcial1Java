@@ -21,7 +21,8 @@ public class Main {
 	//	digitosPares ();
 	//	numeroTriangular();
 	//	promedioNegativos();
-		multiplosDeSeis();
+	//	multiplosDeSeis();
+		potenciaDeDos();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -359,6 +360,24 @@ public class Main {
 		for(int i = 1; i <= numero; i++) {
 			multiplo = 6 * i;
 			System.out.print( multiplo + ", " );
+		}
+	}
+	//problema 17
+	public static void potenciaDeDos() {
+		System.out.println("Introduce un número para conocer si es potencia de 2");
+		System.out.print("Número:");
+		double numero = sc.nextDouble();
+		if (numero <= 0) {
+			System.out.println("Número invalido");
+			return;
+		}
+		while (numero % 2 == 0) {
+			numero /= 2;
+		}
+		if (numero == 1) {
+			System.out.println("El número es potencia de 2");
+		}else {
+			System.out.println("El número NO es potencia de 2");
 		}
 	}
 }
