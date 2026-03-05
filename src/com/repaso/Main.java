@@ -17,7 +17,8 @@ public class Main {
 	//	numerosRomanos();
 	//	sumaRestaMultiplicacion();
 	//	mayorMenor();
-		tablaDivison();
+	//	tablaDivison();
+		digitosPares ();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -277,8 +278,24 @@ public class Main {
 				System.out.println(numero + " / " + i + " = " + ((double)numero/i));
 			}
 		}
-		
 	}
-	
+	// problema  13
+	public static void digitosPares () {
+		System.out.println("Ingresa un número para contar su cantidad de números pares");
+		System.out.print("Número: ");
+		int numero = sc.nextInt();
+		int pares = 0;
+		
+		numero = Math.abs(numero);
+		
+		while (numero != 0) {
+			int digito = numero % 10;
+			if (digito % 2 == 0) {
+				pares ++;
+			}
+			numero /= 10;
+		}
+		System.out.println("La cantidad de pares es: " + pares);
+	}
 }
 	
