@@ -19,7 +19,8 @@ public class Main {
 	//	mayorMenor();
 	//	tablaDivison();
 	//	digitosPares ();
-		numeroTriangular();
+	//	numeroTriangular();
+		promedioNegativos();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -318,6 +319,29 @@ public class Main {
 			System.out.println("El número es triangular");
 		}else {
 			System.out.println("El número NO es triangular");
+		}
+	}
+	// problema 15
+	public static void promedioNegativos() {
+		System.out.println("Ingresa la cantidad de números que deseas ingresar");
+		System.out.print("Cantidad: ");
+		int cantidad = sc.nextInt();
+		double sumaNegativos = 0;
+		int contadorNegativos = 0;
+		
+		for (int i = 1; i <= cantidad; i++) {
+			System.out.print("Número: ");
+			double numero = sc.nextDouble();
+			
+			if (numero < 0) {
+				sumaNegativos += numero;
+				contadorNegativos++;
+			}
+		}
+		if (contadorNegativos == 0) {
+			System.out.println("NO hay negativos ");
+		}else {
+			System.out.println("El promedio es: " + (sumaNegativos/contadorNegativos));
 		}
 	}
 }
