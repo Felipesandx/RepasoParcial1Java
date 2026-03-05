@@ -22,7 +22,9 @@ public class Main {
 	//	numeroTriangular();
 	//	promedioNegativos();
 	//	multiplosDeSeis();
-		potenciaDeDos();
+	//	potenciaDeDos();
+	//	numeroInvertido();
+		parOImpar();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -366,7 +368,7 @@ public class Main {
 	public static void potenciaDeDos() {
 		System.out.println("Introduce un número para conocer si es potencia de 2");
 		System.out.print("Número:");
-		double numero = sc.nextDouble();
+		int numero = sc.nextInt();
 		if (numero <= 0) {
 			System.out.println("Número invalido");
 			return;
@@ -378,6 +380,39 @@ public class Main {
 			System.out.println("El número es potencia de 2");
 		}else {
 			System.out.println("El número NO es potencia de 2");
+		}
+	}
+	//problema 18
+	public static void numeroInvertido() {
+		System.out.println("Introduce un número para verlo invertido");
+		System.out.print("Número:");
+		int numero = sc.nextInt();
+		int invertido = 0;
+		
+		while (numero != 0) {
+			int digito = numero % 10;
+			invertido = invertido * 10 + digito;
+			numero /= 10;
+		}
+		System.out.println("El número invertido es: " + invertido);
+	}
+	//problema 19
+	public static void parOImpar() {
+		System.out.println("Introduce un número para concer si la suma desde el 1 es par o impar");
+		System.out.print("Número:");
+		int numero = sc.nextInt();
+		int suma = 0;
+		
+		if (numero < 1) {
+			System.out.println("Número invalido");
+		}
+		for(int i = 1; i <= numero; i++) {
+			suma+= i;
+		}
+		if(suma % 2 == 0) {
+			System.out.println("La suma es PAR");
+		}else {
+			System.out.println("La suma es IMPAR");
 		}
 	}
 }
