@@ -20,7 +20,8 @@ public class Main {
 	//	tablaDivison();
 	//	digitosPares ();
 	//	numeroTriangular();
-		promedioNegativos();
+	//	promedioNegativos();
+		multiplosDeSeis();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -342,6 +343,22 @@ public class Main {
 			System.out.println("NO hay negativos ");
 		}else {
 			System.out.println("El promedio es: " + (sumaNegativos/contadorNegativos));
+		}
+	}
+	// problema 16
+	public static void multiplosDeSeis() {
+		System.out.println("Cuantos multiplos de 6 deseas conocer?");
+		System.out.print("Ingresa un número: ");
+		int numero = sc.nextInt();
+		int multiplo;
+		
+		if (numero < 1) {
+			System.out.println("Número invalido");
+			return;
+		}
+		for(int i = 1; i <= numero; i++) {
+			multiplo = 6 * i;
+			System.out.print( multiplo + ", " );
 		}
 	}
 }
