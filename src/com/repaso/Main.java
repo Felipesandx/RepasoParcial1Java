@@ -16,7 +16,8 @@ public class Main {
 	//	horaDelDia();
 	//	numerosRomanos();
 	//	sumaRestaMultiplicacion();
-		mayorMenor();
+	//	mayorMenor();
+		tablaDivison();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -119,7 +120,7 @@ public class Main {
 		while (numero != 0) {
 			digito = numero % 10; //tomar el ultimo digito
 			suma+= digito;
-			numero = numero / 10; //
+			numero = numero / 10; 
 		}
 		System.out.println("La suma de los digitos es: " + suma);
 		}
@@ -246,8 +247,8 @@ public class Main {
 		double numero1 = sc.nextDouble();
 		System.out.print("Segundo número: ");
 		double numero2 = sc.nextDouble();
-		double mayor = 0;
-		double menor = 0;
+		double mayor;
+		double menor;
 		
 		if (numero1 == numero2) {
 			System.out.println("Ambos números son iguales: " + numero1);
@@ -263,5 +264,21 @@ public class Main {
 		System.out.println("El número menor es: " + menor);
 		System.out.println("La diferencia absoluta es: " + Math.abs(numero1-numero2));
 	}
+	// problema 12
+	public static void tablaDivison() {
+		System.out.println("Ingrese un número para mostrar su tabla de división del 1 al 10");
+		int numero = sc.nextInt();
+		
+		if (numero == 0) {
+			System.out.println("El número es 0, no se puede dividir entre 0");
+		}else {
+			System.out.println("Tabla de dividir de " + numero);
+			for (int i = 1; i <= 10; i++) {
+				System.out.println(numero + " / " + i + " = " + ((double)numero/i));
+			}
+		}
+		
+	}
+	
 }
 	
