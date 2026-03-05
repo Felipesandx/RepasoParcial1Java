@@ -15,7 +15,8 @@ public class Main {
 	//	divisiblesEntreTresYNoDos();
 	//	horaDelDia();
 	//	numerosRomanos();
-		sumaRestaMultiplicacion();
+	//	sumaRestaMultiplicacion();
+		mayorMenor();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -220,7 +221,7 @@ public class Main {
 		
 		switch (opcion) {
 		case 1: 
-			resultado = numero1+(numero2);
+			resultado = numero1+numero2;
 			System.out.println("El resultado de: " + numero1 + " + " + numero2 +" es: " + resultado);
 			break;
 		case 2: 
@@ -228,7 +229,7 @@ public class Main {
 			System.out.println("El resultado de: " + numero1 + " - " + numero2 + " es: " + resultado);
 			break;
 		case 3: 
-			resultado = numero1*(numero2);
+			resultado = numero1*numero2;
 			System.out.println("El resultado de: " + numero1 + " * " + numero2 + " es: " + resultado);
 			break;
 			
@@ -236,6 +237,31 @@ public class Main {
 			System.out.println("Número invalido");
 			return;
 		}
+	}
+	//problema 11
+	public static void mayorMenor() {
+		System.out.println("Bienvenido! Por favor ingresa dos números");
+		
+		System.out.print("Primer número: ");
+		double numero1 = sc.nextDouble();
+		System.out.print("Segundo número: ");
+		double numero2 = sc.nextDouble();
+		double mayor = 0;
+		double menor = 0;
+		
+		if (numero1 == numero2) {
+			System.out.println("Ambos números son iguales: " + numero1);
+			return;
+		}else if(numero1 > numero2) {
+			mayor = numero1;
+			menor = numero2;
+		}else {
+			mayor = numero2;
+			menor = numero1;
+		}
+		System.out.println("El número mayor es: " + mayor);
+		System.out.println("El número menor es: " + menor);
+		System.out.println("La diferencia absoluta es: " + Math.abs(numero1-numero2));
 	}
 }
 	
