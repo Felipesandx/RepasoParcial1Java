@@ -13,7 +13,8 @@ public class Main {
 	//	sumaDigitos();
 	//	multiplosDeSieteOnce();
 	//	divisiblesEntreTresYNoDos();
-		horaDelDia();
+	//	horaDelDia();
+		numerosRomanos();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -166,5 +167,35 @@ public class Main {
 			System.out.println("Noche");
 		}
 	}
+	//problema 9
+	public static void numerosRomanos() {
+		System.out.println("Conversión de números romanos");
+		System.out.println("Ingresa un número del 1 al 5");
+		int numero = sc.nextInt();
+		String numeroRomano = "Sin numero";
+		
+		switch(numero) {
+		case 1:
+			numeroRomano = "I";
+			break;
+		case 2:
+			numeroRomano = "II";
+			break;
+		case 3:
+			numeroRomano = "III";
+			break;
+		case 4:
+			numeroRomano = "IV";
+			break;
+		case 5:
+			numeroRomano = "V";
+			break;
+			
+			default :
+				System.out.println("Número invalido");
+				return;
+		}
+		System.out.println("La conversion a Número Romano es: " + numeroRomano);
+	} 
 }
 	
