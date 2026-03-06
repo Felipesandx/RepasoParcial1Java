@@ -5,27 +5,98 @@ import java.util.Scanner;
 public class Main {
 	static Scanner sc = new Scanner (System.in);
 	public static void main(String[] args) {
-		
-	//	sumatoriaNumeroDivisible ();
-	//	numeroFactorial();
-	//	leerCantidadNum();
-	//	promedioNumerosPares();
-	//	sumaDigitos();
-	//	multiplosDeSieteOnce();
-	//	divisiblesEntreTresYNoDos();
-	//	horaDelDia();
-	//	numerosRomanos();
-	//	sumaRestaMultiplicacion();
-	//	mayorMenor();
-	//	tablaDivison();
-	//	digitosPares ();
-	//	numeroTriangular();
-	//	promedioNegativos();
-	//	multiplosDeSeis();
-	//	potenciaDeDos();
-	//	numeroInvertido();
-	//	parOImpar();
-		celsiusFahrenheit();
+		System.out.println("Bienvenido! Selecciona una opcion.");
+	    System.out.println("1. Divisbles entre 4 hasta n");
+	    System.out.println("2. Factorial de n");
+	    System.out.println("3. Números postivios y negativos de n");
+	    System.out.println("4. Promedio de Números pares");
+	    System.out.println("5. Suma de los digitos de n");
+	    System.out.println("6. Mutiplos de 7 u 11");
+	    System.out.println("7. Números divisibles entre 3 pero no entre 2");
+	    System.out.println("8. Hora del día en formato 24h");
+	    System.out.println("9. Números romanos del 1 al 5");
+	    System.out.println("10. Sumar, Restar O multiplicar");
+	    System.out.println("11. Mayor/menor y diferencia absoluta");
+	    System.out.println("12. Tabla de división de n");
+	    System.out.println("13. Cantidad de Digitos Pares");
+	    System.out.println("14. Número triangular");
+	    System.out.println("15. Promedio de números negativos");
+	    System.out.println("16. Multiplos de 6");
+	    System.out.println("17. Verificar si un número es potencia de 2");
+	    System.out.println("18. Invertir un número");
+	    System.out.println("19. Determinar si la suma de 1 a n es par o impar");
+	    System.out.println("20. Convertir Celsius a Fahrenheit");
+	    System.out.println("0. Salir");
+		int opcionMenu = sc.nextInt();
+		switch (opcionMenu){
+		case 1:
+			sumatoriaNumeroDivisible ();
+			break;
+		case 2:
+			numeroFactorial();
+			break;
+		case 3:
+			leerCantidadNum();
+			break;
+		case 4:
+			promedioNumerosPares();
+			break;
+		case 5:
+			sumaDigitos();
+			break;
+		case 6:
+			multiplosDeSieteOnce();
+			break;
+		case 7:
+			divisiblesEntreTresYNoDos();
+			break;
+		case 8:
+			horaDelDia();
+			break;
+		case 9:
+			numerosRomanos();
+			break;
+		case 10:
+			sumaRestaMultiplicacion();
+			break;
+		case 11:
+			mayorMenor();
+			break;
+		case 12:
+			tablaDivison();
+			break;
+		case 13:
+			digitosPares ();
+			break;
+		case 14:
+			numeroTriangular();
+			break;
+		case 15:
+			promedioNegativos();
+			break;
+		case 16:
+			multiplosDeSeis();
+			break;
+		case 17:
+			potenciaDeDos();
+			break;
+		case 18:
+			numeroInvertido();
+			break;
+		case 19:
+			parOImpar();
+			break;
+		case 20:
+			celsiusFahrenheit();
+			break;
+		case 0:
+			System.out.println("Saliendo del programa...");	
+			sc.close();
+			return;
+			default: 
+				System.out.println("Número invalido");
+				return;
+		}		
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
