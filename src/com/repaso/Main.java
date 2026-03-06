@@ -24,7 +24,8 @@ public class Main {
 	//	multiplosDeSeis();
 	//	potenciaDeDos();
 	//	numeroInvertido();
-		parOImpar();
+	//	parOImpar();
+		celsiusFahrenheit();
 	}
 	//problema 1
 	public static void sumatoriaNumeroDivisible () {
@@ -405,6 +406,7 @@ public class Main {
 		
 		if (numero < 1) {
 			System.out.println("Número invalido");
+			return;
 		}
 		for(int i = 1; i <= numero; i++) {
 			suma+= i;
@@ -414,6 +416,17 @@ public class Main {
 		}else {
 			System.out.println("La suma es IMPAR");
 		}
+	}
+	//problema 20
+	static void celsiusFahrenheit() {
+		System.out.println("Escriba la temperatura en grados celcius");
+		System.out.print("Grados:");
+		double temperatura = sc.nextDouble();
+		double temperaturaConvertida;
+		temperaturaConvertida = (temperatura * 9/5) + 32;
+		
+		System.out.println("\nLa temperatura en Celsius es: "+temperatura+"°C");
+		System.out.println("La temperatura convertida en Fahrenheit es: "+temperaturaConvertida+"°F");
 	}
 }
 	
